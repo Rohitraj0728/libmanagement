@@ -1,29 +1,29 @@
-import React, { Component } from 'react';
+import React, { Fragment } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from './components/layout/Navbar';
+import Landing from './components/layout/Landing';
+import Register_admin from './components/auth/Register_admin';
+import Register_student from './components/auth/Register_student';
 
-import logo from './logo.svg';
 import './App.css';
 
-class App extends Component {
-    render() {
-        return (
-            <div className="App">
-                <header className="App-header">
-                    <img src={logo} className="App-logo" alt="logo" />
-                    <p>
-                        Edit <code>src/App.js</code> and save to reload.
-                    </p>
-                    <a
-                        className="App-link"
-                        href="https://reactjs.org"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Learn React
-                    </a>
-                </header>
-            </div>
-        );
-    }
-}
+import { Provider } from 'react-redux';
+
+const App = () => {
+    return (
+
+        <Router>
+            <Navbar />
+            <Routes>
+                <Route path="/" element={<Landing />} />
+                <Route path="studentRegister" element={<Register_student />} />
+                <Route path="adminRegister" element={< Register_admin />} />
+
+            </Routes>
+        </Router>
+
+    )
+};
+
 
 export default App;

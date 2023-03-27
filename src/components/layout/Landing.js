@@ -12,8 +12,8 @@ const Landing = () => {
                         physical process.
                     </p>
                     <div className="buttons">
-                        <a href="signin_student.html" className="btn btn-primary">Are you a student?</a>
-                        <a href="signin_admin.html" className="btn btn-light">Admin?</a>
+                        <Link to="/studentRegister" className="btn btn-primary">Are you a student?</Link>
+                        <Link to="/adminRegister" className="btn btn-light">Admin?</Link>
                     </div>
                 </div>
             </div>

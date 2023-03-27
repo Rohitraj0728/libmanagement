@@ -1,20 +1,26 @@
 import React from 'react'
+// import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import logo from '../../img/logo.png'
-
+import { Link } from 'react-router-dom'
+// import Login from '../auth/Login'
 const Navbar = () => {
     return (
         <div>
             <nav className="navbar">
-                <div class="navbar-logo">
-                    <img src={logo} alt="Logo" />
+                <div className="navbar-logo">
+                    <Link to="/">
+                        <img src={logo} alt="Logo" />
+                        NITS Library
+                    </Link>
+
                 </div>
                 <ul className="navbar-links">
-                    <li><a href="#">Signup</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><Link to="#">Login</Link></li>
+                    <li><Link to="#">About</Link></li>
+                    <li><Link to="#">Contact</Link></li>
                 </ul>
-            </nav>
-        </div>
+            </nav >
+        </div >
     )
 }
 

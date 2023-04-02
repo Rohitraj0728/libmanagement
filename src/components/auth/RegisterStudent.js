@@ -1,16 +1,16 @@
 import React from 'react'
+import { Link, Navigate } from 'react-router-dom';
 const Register_student = () => {
     return (
         <section class="container">
             <h1 class="large text-primary">Student Sign Up</h1>
             <p class="lead"><i class="fas fa-user"></i> Create Your Account</p>
-            <form class="form" action="create-profile.html">
+            <form class="form" action="/bookDisplay">
                 <div class="form-group">
                     <input type="text" placeholder="Name" name="name" required />
                 </div>
                 <div class="form-group">
                     <input type="email" placeholder="Institute Email Address" name="email" required />
-
                 </div>
                 <div class="form-group">
                     <input
@@ -56,7 +56,8 @@ const Register_student = () => {
                         required
                     />
                 </div>
-                <input type="submit" class="btn btn-primary" value="Register" />
+                <Link to="/bookDisplay" className="btn btn-primary">Register</Link>
+                {/* <input type="submit" class="btn btn-primary" value="Register" /> */}
             </form>
             <p class="my-1">
                 Already have an account? <a href="login.html">Sign In</a>

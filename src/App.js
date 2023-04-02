@@ -1,9 +1,10 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
 import Landing from './components/layout/Landing';
-import Register_admin from './components/auth/Register_admin';
-import Register_student from './components/auth/Register_student';
+import RegisterAdmin from './components/auth/RegisterAdmin';
+import RegisterStudent from './components/auth/RegisterStudent';
+import BookDisplay from './components/bookDisplay/BookDisplay.js';
 
 import './App.css';
 
@@ -16,9 +17,10 @@ const App = () => {
             <Navbar />
             <Routes>
                 <Route path="/" element={<Landing />} />
-                <Route path="studentRegister" element={<Register_student />} />
-                <Route path="adminRegister" element={< Register_admin />} />
-
+                <Route path="studentRegister" element={<RegisterStudent />} />
+                <Route path="adminRegister" element={< RegisterAdmin />} />
+                <Route path="bookDisplay" element={< BookDisplay/>} />
+                
             </Routes>
         </Router>
 

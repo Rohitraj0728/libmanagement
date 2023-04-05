@@ -2,15 +2,15 @@ import React from 'react'
 
 const Login = () => {
     return (
-        <section class="container">
-            <h1 class="large text-primary">Admin/Students Sign In</h1>
-            <p class="lead"><i class="fas fa-user"></i> Sign Into Your Account</p>
-            <form class="form" action="create-profile.html">
-                <div class="form-group">
+        <section className="container">
+            <h1 className="large text-primary">Admin/Students Sign In</h1>
+            <p className="lead"><i class="fas fa-user"></i> Sign Into Your Account</p>
+            <form className="form" action="create-profile.html">
+                <div className="form-group">
                     <input type="email" placeholder=" Email Address" name="email" required />
 
                 </div>
-                <div class="form-group">
+                <div className="form-group">
                     <input
                         type="password"
                         placeholder="Password"
@@ -21,7 +21,7 @@ const Login = () => {
                 </div>
 
 
-                <input type="submit" class="btn btn-primary" value="Login" />
+                <input type="submit" className="btn btn-primary" value="Login" />
             </form>
 
         </section>

@@ -27,7 +27,7 @@ const Register_student = () => {
     };
     return (
         <section className="container">
-            <h1 className="large text-primary">Student Sign Up</h1>
+            <h1 className="large text-light">Student Sign Up</h1>
             <p className="lead"><i class="fas fa-user"></i> Create Your Account</p>
             <form className="form" onSubmit={e => onSubmit(e)}>
                 <div className="form-group">
@@ -81,12 +81,13 @@ const Register_student = () => {
                         required
                     />
                 </div>
-                <input type="submit" class="btn btn-primary" value="Register" />
+                <input type="submit" class="btn btn-danger" value="Register" />
             </form>
             <p className="my-1">
                 Already have an account? <Link to="/login">Sign In</Link >
             </p>
         </section >
+
     )
 };
 

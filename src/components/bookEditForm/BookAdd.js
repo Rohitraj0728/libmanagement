@@ -1,15 +1,17 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
-const Register_admin = () => {
+const BookAdd = () => {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
         mobile: '',
+        Scholar_Id: '',
         password: '',
-        password2: ''
+        password2: '',
+        file: ''
     });
 
-    const { name, email, mobile, password, password2 } = formData;
+    const { name, email, mobile, Scholar_Id, password, password2, file } = formData;
 
     const onChange = (e) =>
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -25,55 +27,50 @@ const Register_admin = () => {
     };
     return (
         <section className="container">
-            <h1 className="large text-light">Admin Sign Up</h1>
-            <p className="lead"><i class="fas fa-user"></i> Create Your Account</p>
+            <h1 className="large text-light">Book Details</h1>
             <form className="form" onSubmit={e => onSubmit(e)}>
                 <div className="form-group">
-                    <input type="text" placeholder="Name" name="name" onChange={onChange} required />
+                    <input type="text" placeholder="Name of the book" name="name" required />
                 </div>
                 <div className="form-group">
-                    <input type="email" placeholder=" Email Address" name="email" onChange={onChange} required />
+                    <input type="text" placeholder="Book Id" name="name" required />
+                </div>
+                <div className="form-group">
+                    <input type="text" placeholder="Author Name" name="author" required />
 
                 </div>
                 <div className="form-group">
                     <input
                         type="number"
-                        placeholder="Mobile No."
-                        name="mobile"
-                        minLength="10"
-                        maxLength="10"
-                        onChange={onChange}
+                        placeholder="Number of copies available"
+                        name="copies"
+                        maxLength={4}
                         required
                     />
                 </div>
                 <div className="form-group">
                     <input
-                        type="password"
-                        placeholder="Password"
-                        name="password"
-                        minLength={6}
+                        type="text"
+                        placeholder="Related to which department"
+                        name="department"
                         required
                     />
                 </div>
 
                 <div className="form-group">
                     <input
-                        type="password"
-                        placeholder="Confirm Password"
-                        name="password2"
-                        minLength={6}
-                        onChange={onChange}
+                        type="file"
+                        placeholder="Upload book cover photo"
+                        name="file"
                         required
                     />
                 </div>
-
-                <input type="submit" className="btn btn-danger" value="Register" />
+                <input type="submit" class="btn btn-danger" value="Add" />
             </form>
-            <p className="my-1">
-                Already have an account? <Link to="/login">Sign In</Link>
-            </p>
-        </section >
-    )
-}
 
-export default Register_admin
+        </section >
+
+    )
+};
+
+export default BookAdd

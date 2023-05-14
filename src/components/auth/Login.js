@@ -3,7 +3,7 @@ import React from 'react'
 const Login = () => {
     return (
         <section className="container">
-            <h1 className="large text-primary">Admin/Students Sign In</h1>
+            <h1 className="large text-light">Admin/Students Sign In</h1>
             <p className="lead"><i class="fas fa-user"></i> Sign Into Your Account</p>
             <form className="form" action="create-profile.html">
                 <div className="form-group">
@@ -21,7 +21,7 @@ const Login = () => {
                 </div>
 
 
-                <input type="submit" className="btn btn-primary" value="Login" />
+                <input type="submit" className="btn btn-danger" value="Login" />
             </form>
 
         </section>

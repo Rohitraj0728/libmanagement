@@ -1,0 +1,12 @@
+.about-parent-card{
+    background-color: white;
+    color: black;
+    width: 60rem;
+    margin: 20px auto;
+    padding: 28px;
+    border-radius: 15px;
+    
+}
+.about-list{
+    list-style-type: disc;
+}
